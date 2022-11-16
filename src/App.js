@@ -1,65 +1,55 @@
-import React, {useState} from "react";
-import axios from 'axios';
+import React, { useState } from "react";
+// import axios from 'axios';
+import Search from './components/search';
+import CurrentWeather from "./components/current-weather";
+import { WEATHER_API_KEY, WEATHER_API_URL } from "./components/api"
 
 
 function App() {
 
-  
-  const [data,setData] = useState({})
-  const [location, setLocation] = useState('')
+  const [currentWeather, setCurrentWeather] = useState(null)
+
+  // const [data,setData] = useState({})
+  // const [location, setLocation] = useState('')
+
+  // const url = `https://api.openweathermap.org/data/2.5/weather?lat=43.82&lon=-111.79&appid=${process.env.API_KEY}`;
+  // const urlLocation = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=5&appid=${process.env.API_KEY}`;
 
 
+  // const searchLocation = (event) => {
+  //   if(event.key === 'Enter') {
+  //     axios.get(url).then((response) => {
+  //       setData(response.data)
+  //       console.log(response.data)
+  //     });
+  //     setLocation('')
+  //   }
+  // };
+  const handleOnSearchChange = (searchData) => {
+    const [lat, lon] = searchData.value.split(" ");
+    const currentWeatherURL = `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${WEATHER_API_KEY}`;
+    fetch(currentWeatherURL)
+      .then(async (response) => {
+          const weatherResponse = await response.json();
 
-  const searchLocation = (event) => {
-    if(event.key === 'Enter') {
-      axios.get(url).then((response) => {
-        setData(response.data)
-        console.log(response.data)
-      });
-      setLocation('')
-    }
+          setCurrentWeather({ city: searchData.label, ...weatherResponse });
+        })
+        .catch((err) => console.log(err));
+    console.log(currentWeather);
+
   };
 
-  
+
   return (
     <div className="App">
       <div className="search">
-        <input
-        value={location}
-        onChange={event => setLocation(event.target.value)}
-        onKeyPress={searchLocation}
-        placeholder="Enter Location"
-        type="text"/>
+        <Search onSearchChange={handleOnSearchChange} />
       </div>
-      <div className='container'>
-        <div className='top'>
-          <div className='location'>
-            <p>{data.name}</p>
-          </div>
-          <div className='temp'>
-            <h1>60 F</h1>
-          </div>
-          <div className="description">
-            <p>clouds</p>
-          </div>
-        </div>
-        <div className="bottom">
-          <div className="feels">
-            <p className="bold">65 F</p>
-            <p>Feels Like</p>
-          </div>
-          <div className="humidity">
-            <p className="bold">20%</p>
-            <p>Humidity</p>
-          </div>
-          <div className="wind">
-            <p className="bold">12 MPH</p>
-            <p>Wind Speed</p>
-          </div>
-        </div>
-      </div>
+      {currentWeather && <CurrentWeather data={currentWeather} />}
+
+
     </div>
-     
+
 
   );
 }
