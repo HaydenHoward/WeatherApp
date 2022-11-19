@@ -1,41 +1,40 @@
 import React from "react";
-// import "./current-weather.css";
 
 const CurrentWeather = ({ data }) => {
   return (
     <div className="container">
-        <div className="top">
-          <div className="location">
-            <p>{data.name}</p>
+      <div className="top">
+        <div className="local-temp">
+        <div className="location">
+          <p>{data.name}</p>
+        </div>
+        <div className="temp">
+          {data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
+        </div>
+        </div>
+        <div className="description">
+          {data.weather ? <p className="description-word">{data.weather[0].main}</p> : null}
+        <img alt="weather" className="weather-icon" src={`icons/${data.weather[0].icon}.png`}></img>
+        </div>
+      </div>
+
+      {data.name !== undefined &&
+        <div className="bottom">
+          <div className="feels">
+            {data.main ? <p className='bold'>{data.main.feels_like.toFixed()}°F</p> : null}
+            <p>Feels Like</p>
           </div>
-          <div className="temp">
-            {data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
+          <div className="humidity">
+            {data.main ? <p className='bold'>{data.main.humidity}%</p> : null}
+            <p>Humidity</p>
           </div>
-          <div className="description">
-            {data.weather ? <p>{data.weather[0].main}</p> : null}
+          <div className="wind">
+            {data.wind ? <p className='bold'>{data.wind.speed.toFixed()} MPH</p> : null}
+            <p>Wind Speed</p>
           </div>
         </div>
-
-        {data.name !== undefined &&
-          <div className="bottom">
-            <div className="feels">
-              {data.main ? <p className='bold'>{data.main.feels_like.toFixed()}°F</p> : null}
-              <p>Feels Like</p>
-            </div>
-            <div className="humidity">
-              {data.main ? <p className='bold'>{data.main.humidity}%</p> : null}
-              <p>Humidity</p>
-            </div>
-            <div className="wind">
-              {data.wind ? <p className='bold'>{data.wind.speed.toFixed()} MPH</p> : null}
-              <p>Wind Speed</p>
-            </div>
-          </div>
-        }
-
-
-
-      </div>
+      }
+    </div>
   );
 };
 
