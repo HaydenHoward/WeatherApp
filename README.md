@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React project to be introduced to the Framework and get an understanding what I can create. Learning how to connect my web app with an api and display different data based on the user input.
 
-## Available Scripts
+I made simple Weather app that displays the Location, Temperature, Weather, what the temperature Feels Like, Humidity, and Wind Speed. To open this you need to use node.js and use NPM start to open up the localhost server to view the web page. 
 
-In the project directory, you can run:
+I enjoy the outdoors and wanted to do something in that theme. I was looking at different APIs that I could use to practice using them in React and found the OpenWeather API.
 
-### `npm start`
+{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running (starting the server and navigating through the web pages) and a walkthrough of the code.}
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Software Demo Video](http://youtube.link.goes.here)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Web Pages
 
-### `npm test`
+The page on my web app displays the weather. All the numbers on the page change based on the location that the user puts into the search bar at the top of the web page. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Development Environment
 
-### `npm run build`
+OpenWeather API, Geo API, and GitHub
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React, Node, HTML, and CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Useful Websites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [YouTube - React JS Tutorial](https://www.youtube.com/watch?v=Reny0cTTv24&t=2s)
+* [Youtube - Build A React JS Weather App](https://www.youtube.com/watch?v=UjeXpct3p7M&t=311s)
+* [OpenWeather](https://openweathermap.org)
+* [RapidAPI](https://rapidapi.com/wirefreethought/api/geodb-cities)
+* [GitHub - Public APIs](https://github.com/public-apis/public-apis)
+# Future Work
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+{Make a list of things that you need to fix, improve, and add in the future.}
+* Make background image animated
+* Add another page for forecasts
+* Make background image change based on location entered
