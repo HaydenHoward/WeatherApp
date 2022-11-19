@@ -6,9 +6,7 @@ I made simple Weather app that displays the Location, Temperature, Weather, what
 
 I enjoy the outdoors and wanted to do something in that theme. I was looking at different APIs that I could use to practice using them in React and found the OpenWeather API.
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running (starting the server and navigating through the web pages) and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/zHIOiqK55Vg)
 
 # Web Pages
 
@@ -29,7 +27,6 @@ React, Node, HTML, and CSS
 * [GitHub - Public APIs](https://github.com/public-apis/public-apis)
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
 * Make background image animated
 * Add another page for forecasts
 * Make background image change based on location entered
